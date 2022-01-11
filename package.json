@@ -1,0 +1,19 @@
+{
+  "name": "serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "start": "serverless invoke local --function checkstock",
+    "deploy-all": "serverless deploy",
+    "deploy": "serverless deploy function -f checkstock",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.15.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}

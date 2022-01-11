@@ -1,0 +1,14 @@
+service: legion-stock
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-3
+  lambdaHashingVersion: 20201221
+
+functions:
+  checkstock:
+    handler: handler.checkstock
+    events:
+      - schedule: rate(5 minutes)
